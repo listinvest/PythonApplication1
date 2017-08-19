@@ -5,6 +5,7 @@ import tornado.web
 
 import RPi.GPIO as GPIO
 import time
+from PythonApplication1 import GPIO
 
 #GPIO Setup
 GPIO.setmode(GPIO.BOARD)
@@ -68,17 +69,17 @@ class WSHandler(tornado.websocket.WebSocketHandler):
 		# 	GPIO.output(13,False)
 		# 	GPIO.output(15,False)
 
-		# finally:
-		# 	print "FINALLY"
-		# 	GPIO.output(11,False)
-		# 	GPIO.output(12,False)
-		# 	GPIO.output(13,False)
-		# 	GPIO.output(15,False)
+		 finally:
+            print "FINALLY"
+		 	GPIO.output(11,False)
+		 	GPIO.output(12,False)
+		 	GPIO.output(13,False)
+		 	GPIO.output(15,False)
 
  
 
 	def on_close(self):
-		print ("closing sockets")
+	    print ("closing sockets")
 		GPIO.output(11,False)
 		GPIO.output(12,False)
 		GPIO.output(13,False)
