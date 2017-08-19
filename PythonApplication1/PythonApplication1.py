@@ -78,7 +78,7 @@ class WSHandler(tornado.websocket.WebSocketHandler):
 
  
 
-	def on_close(self):
+    def on_close(self):
 	    print ("closing sockets")
 		GPIO.output(11,False)
 		GPIO.output(12,False)
