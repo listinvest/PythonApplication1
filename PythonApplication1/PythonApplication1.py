@@ -68,12 +68,12 @@ class WSHandler(tornado.websocket.WebSocketHandler):
         #   GPIO.output(13,False)
         #   GPIO.output(15,False)
 
-        # finally:
-        #   print "FINALLY"
-        #   GPIO.output(11,False)
-        #   GPIO.output(12,False)
-        #   GPIO.output(13,False)
-        #   GPIO.output(15,False)
+        finally:
+            print "FINALLY"
+            GPIO.output(11,False)
+            GPIO.output(12,False)
+            GPIO.output(13,False)
+            GPIO.output(15,False)
 
  
 
